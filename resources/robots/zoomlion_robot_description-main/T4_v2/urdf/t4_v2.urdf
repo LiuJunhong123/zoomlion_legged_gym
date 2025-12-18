@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="T4">
+  <mujoco>
+    <compiler meshdir="../meshes/" balanceinertia="true" discardvisual="false" />
+  </mujoco>
+    <!-- <link name="ground"/>
+  <joint
+    name="base_revolute"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ground" />
+    <child
+      link="Trunk" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.01"
+      upper="0.01"
+      effort="18"
+      velocity="18.84" />
+  </joint> -->
+  <link
+    name="Trunk">
+    <inertial>
+      <origin
+        xyz="-0.0029485 0.0027285 0.243858"
+        rpy="0 0 0" />
+      <mass
+        value="11.6560" />
+      <inertia
+        ixx="0.220661"
+        ixy="-0.000881"
+        ixz="0.004576"
+        iyy="0.208342"
+        iyz="-0.000990"
+        izz="0.061275" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0.25"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.16 0.25" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0.06"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 0.45"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.06" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0.25"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.16 0.25" />
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin
+        xyz="0 0 0.06"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.1" />
+      </geometry>
+    </collision>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0.45"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.06" />
+      </geometry>
+    </collision> -->
+  </link>
+  <link
+    name="AL1">
+    <inertial>
+      <origin
+        xyz="0.0021514 0.0684657 0.0009330"
+        rpy="0 0 0" />
+      <mass
+        value="0.5751" />
+      <inertia
+        ixx="0.000631"
+        ixy="-0.000003"
+        ixz="-0.000006"
+        iyy="0.000340"
+        iyz="0.000011"
+        izz="0.000640" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0.08 0.0"
+        rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 0.08 0.0"
+        rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_l_01"
+    type="revolute">
+    <origin
+      xyz="0.0 0.0945 0.324"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="AL1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.40"
+      upper="1.186"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AL2">
+    <inertial>
+      <origin
+        xyz="0.001752 0.0001277 -0.0377904"
+        rpy="0 0 0" />
+      <mass
+        value="0.2020" />
+      <inertia
+        ixx="0.000309"
+        ixy="0.0"
+        ixz="0.000022"
+        iyy="0.000397"
+        iyz="-0.0"
+        izz="0.000239" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0 -0.0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="-0 -0.0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_l_02"
+    type="revolute">
+    <origin
+      xyz="0 0.08 0"
+      rpy="0 0 0" />
+    <parent
+      link="AL1" />
+    <child
+      link="AL2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.174"
+      upper="3.228"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AL3">
+    <inertial>
+      <origin  
+        xyz="-0.0009466	-0.0026737 -0.0728228"
+        rpy="0 0 0" />
+      <mass
+        value="1.0108" />
+      <inertia
+        ixx="0.002350"
+        ixy="0.000111"
+        ixz="0.000012"
+        iyy="0.002316"
+        iyz="0.000004"
+        izz="0.000584" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.04"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.08" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 -0.0 -0.115"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.04"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 -0.0 -0.115"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_l_03"
+    type="revolute">
+    <origin
+      xyz="-0 0 -0.087"
+      rpy="0 0 0" />
+    <parent
+      link="AL2" />
+    <child
+      link="AL3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AL4">
+    <inertial>
+      <origin
+        xyz="-0.0005424	0.0004743 -0.0714696"
+        rpy="0 0 0" />
+      <mass
+        value="0.5074" />
+      <inertia
+        ixx="0.000550"
+        ixy="0.000110"
+        ixz="-0.000005"
+        iyy="0.000514"
+        iyz="0.0"
+        izz="0.000268" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 -0 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.06" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 -0 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.06" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_l_04"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.115"
+      rpy="0 0 0" />
+    <parent
+      link="AL3" />
+    <child
+      link="AL4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.00"
+      upper="0.034"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AL5">
+    <inertial>
+      <origin
+        xyz="-0.0003870 -0.0000285 -0.0734175"
+        rpy="0 0 0" />
+      <mass
+        value="0.2754" />
+      <inertia
+        ixx="0.0009173285"
+        ixy="0"
+        ixz="0"
+        iyy="0.0009166859"
+        iyz="0"
+        izz="0.0001331181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.06"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.12" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 -0.1405"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.028" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.06"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.12" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 0 -0.1405"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.028" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_l_05"
+    type="revolute">
+    <origin
+      xyz="0 -0.003 -0.109"
+      rpy="0 0 0" />
+    <parent
+      link="AL4" />
+    <child
+      link="AL5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AR1">
+    <inertial>
+      <origin
+        xyz="0.0021514 -0.0684657 0.0009330"
+        rpy="0 0 0" />
+      <mass
+        value="0.5751" />
+      <inertia
+        ixx="0.000631"
+        ixy="0.000003"
+        ixz="-0.000006"
+        iyy="0.000340"
+        iyz="-0.000011"
+        izz="0.000640" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0.0 -0.08 0.0"
+        rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0.0 -0.08 0.0"
+        rpy="0 1.57 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_r_01"
+    type="revolute">
+    <origin
+      xyz="0.0 -0.0945 0.324"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="AR1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.40"
+      upper="1.186"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AR2">
+    <inertial>
+      <origin
+        xyz="0.001752 -0.0001277 -0.0377904"
+        rpy="0 0 0" />
+      <mass
+        value="0.2020" />
+      <inertia
+        ixx="0.000309"
+        ixy="-0.0"
+        ixz="0.000022"
+        iyy="0.000397"
+        iyz="0.0"
+        izz="0.000239" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0 0.0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="-0 0.0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_r_02"
+    type="revolute">
+    <origin
+      xyz="0 -0.08 0"
+      rpy="0 0 0" />
+    <parent
+      link="AR1" />
+    <child
+      link="AR2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.228"
+      upper="0.174"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AR3">
+    <inertial>
+      <origin  
+        xyz="-0.0009466	0.0026737 -0.0728228"
+        rpy="0 0 0" />
+      <mass
+        value="1.0108" />
+      <inertia
+        ixx="0.002350"
+        ixy="-0.000111"
+        ixz="0.000012"
+        iyy="0.002316"
+        iyz="-0.000004"
+        izz="0.000584" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.04"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.08" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0.0 -0.115"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.04"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.08" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 0.0 -0.115"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_r_03"
+    type="revolute">
+    <origin
+      xyz="-0 0 -0.087"
+      rpy="0 0 0" />
+    <parent
+      link="AR2" />
+    <child
+      link="AR3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AR4">
+    <inertial>
+      <origin
+        xyz="-0.0005424	-0.0004743 -0.0714696"
+        rpy="0 0 0" />
+      <mass
+        value="0.5074" />
+      <inertia
+        ixx="0.000550"
+        ixy="-0.000110"
+        ixz="-0.000005"
+        iyy="0.000514"
+        iyz="-0.0"
+        izz="0.000268" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.06" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.065"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.06" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_r_04"
+    type="revolute">
+    <origin
+      xyz="0 -0 -0.115"
+      rpy="0 0 0" />
+    <parent
+      link="AR3" />
+    <child
+      link="AR4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.00"
+      upper="0.034"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="AR5">
+    <inertial>
+      <origin
+        xyz="-0.0003870 0.0000285 -0.0734175"
+        rpy="0 0 0" />
+      <mass
+        value="0.2754" />
+      <inertia
+        ixx="0.0009173285"
+        ixy="0"
+        ixz="0"
+        iyy="0.0009166859"
+        iyz="0"
+        izz="0.0001331181" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.06"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.12" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="0 0 -0.1405"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.028" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.06"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.12" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="0 0 -0.1405"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.028" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_arm_r_05"
+    type="revolute">
+    <origin
+      xyz="0 0.003 -0.109"
+      rpy="0 0 0" />
+    <parent
+      link="AR4" />
+    <child
+      link="AR5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.617"
+      upper="2.617"
+      effort="25"
+      velocity="18.84" />
+  </joint>
+  <link
+    name="Waist">
+    <inertial>
+      <origin
+        xyz="0.0000061 0 -0.060228"
+        rpy="0 0 0" />
+      <mass
+        value="3.0798" />
+      <inertia
+        ixx="0.007956"
+        ixy="0.0"
+        ixz="0.000001"
+        iyy="0.006469"
+        iyz="0.0"
+        izz="0.007184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.1" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.1" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_waist_yaw"
+    type="revolute">
+    <origin
+      xyz="0.0 0 -0.0"
+      rpy="0 0 0" />
+    <parent
+      link="Trunk" />
+    <child
+      link="Waist" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.01"
+      upper="1.01"
+      effort="60"
+      velocity="10.88" />
+  </joint>
+  <link
+    name="Hip_Pitch_Left">
+    <inertial>
+      <origin
+        xyz="-0.0006032 -0.0522418 -0.0123757"
+        rpy="0 0 0" />
+      <mass
+        value="1.0332" />
+      <inertia
+        ixx="0.001435"
+        ixy="0.000045"
+        ixz="0.000023"
+        iyy="0.000904"
+        iyz="0.000005"
+        izz="0.001263" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_hip_l_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0.0585 -0.066"
+      rpy="0 0 0" />
+    <parent
+      link="Waist" />
+    <child
+      link="Hip_Pitch_Left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.00"
+      upper="2.00"
+      effort="130"
+      velocity="12.5" />
+  </joint>
+  <link
+    name="Hip_Roll_Left">
+    <inertial>
+      <origin
+        xyz="-0.0032464 -0.0000846 -0.0482163"
+        rpy="0 0 0" />
+      <mass
+        value="0.4228" />
+      <inertia
+        ixx="0.000492"
+        ixy="0.0"
+        ixz="-0.000046"
+        iyy="0.000834"
+        iyz="-0.0"
+        izz="0.000656" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0 -0.0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="-0 0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="-0 -0.0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="-0 0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_hip_l_roll"
+    type="revolute">
+    <origin
+      xyz="0 0.061 -0.0155"
+      rpy="0 0 0" />
+    <parent
+      link="Hip_Pitch_Left" />
+    <child
+      link="Hip_Roll_Left" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.26"
+      upper="1.53"
+      effort="120"
+      velocity="10.9" />
+  </joint>
+  <link
+    name="Hip_Yaw_Left">
+    <inertial>
+      <origin
+        xyz="-0.0027038 0.0003846 -0.1349933"
+        rpy="0 0 0" />
+      <mass
+        value="2.5647" />
+      <inertia
+        ixx="0.018906"
+        ixy="-0.000055"
+        ixz="0.000424"
+        iyy="0.019196"
+        iyz="-0.000002"
+        izz="0.003242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.07"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.14" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="-0.007 0 -0.2095"
+        rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.08" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.07"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.14" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="-0.007 0 -0.2095"
+        rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.08" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_hip_l_yaw"
+    type="revolute">
+    <origin
+      xyz="-0.0005 0 -0.075"
+      rpy="0 0 0" />
+    <parent
+      link="Hip_Roll_Left" />
+    <child
+      link="Hip_Yaw_Left" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="60"
+      velocity="10.9" />
+  </joint>
+  <link
+    name="Shank_Left">
+    <inertial>
+      <origin
+        xyz="0.0061751 0.0010982 -0.1230018"
+        rpy="0 0 0" />
+      <mass
+        value="2.085" />
+      <inertia
+        ixx="0.013245"
+        ixy="-0.000030"
+        ixz="0.000610"
+        iyy="0.013290"
+        iyz="-0.000009"
+        izz="0.002545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.007 -0 -0.17"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.2" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0.007 -0 -0.17"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.2" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_knee_l_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.007 0 -0.2095"
+      rpy="0 0 0" />
+    <parent
+      link="Hip_Yaw_Left" />
+    <child
+      link="Shank_Left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.26"
+      effort="130"
+      velocity="11.7" />
+  </joint>
+  <link
+    name="Ankle_Cross_Left">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="0.00002"
+        ixy="0.00000"
+        ixz="0.00000"
+        iyy="0.00002"
+        iyz="0.00000"
+        izz="0.00002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.02" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.02" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_ankle_l_pitch"
+    type="revolute">
+    <origin
+      xyz="0.007 -0.0015 -0.3"
+      rpy="0 0 0" />
+    <parent
+      link="Shank_Left" />
+    <child
+      link="Ankle_Cross_Left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.87"
+      upper="0.35"
+      effort="72"
+      velocity="18.8" />
+  </joint>
+  <link
+    name="left_foot_link">
+    <inertial>
+      <origin
+        xyz="0.0198743 0 -0.0279436"
+        rpy="0 0 0" />
+      <mass
+        value="0.7981" />
+      <inertia
+        ixx="0.0004793566"
+        ixy="0"
+        ixz="-0.0001115482"
+        iyy="0.0031119535"
+        iyz="0"
+        izz="0.0032936988" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0 0 -0.035"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_foot.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0 0 -0.035"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/left_foot.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J_ankle_l_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Ankle_Cross_Left" />
+    <child
+      link="left_foot_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.44"
+      upper="0.44"
+      effort="36"
+      velocity="12.4" />
+  </joint>
+  <link
+    name="Hip_Pitch_Right">
+    <inertial>
+      <origin
+        xyz="-0.0006032 0.0522418 -0.0123757"
+        rpy="0 0 0" />
+      <mass
+        value="1.0332" />
+      <inertia
+        ixx="0.001435"
+        ixy="-0.000045"
+        ixz="0.000023"
+        iyy="0.000904"
+        iyz="-0.000005"
+        izz="0.001263" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.57 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_hip_r_pitch"
+    type="revolute">
+    <origin
+      xyz="0 -0.0585 -0.066"
+      rpy="0 0 0" />
+    <parent
+      link="Waist" />
+    <child
+      link="Hip_Pitch_Right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.00"
+      upper="2.00"
+      effort="130"
+      velocity="12.5" />
+  </joint>
+  <link
+    name="Hip_Roll_Right">
+    <inertial>
+      <origin
+        xyz="-0.0032464 0.0000846 -0.0482163"
+        rpy="0 0 0" />
+      <mass
+        value="0.4228" />
+      <inertia
+        ixx="0.000492"
+        ixy="-0.0"
+        ixz="-0.000046"
+        iyy="0.000834"
+        iyz="0.0"
+        izz="0.000656" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0 0.0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="-0 0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.04" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="-0 0.0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.05" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="-0 0 -0.05"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.04" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_hip_r_roll"
+    type="revolute">
+    <origin
+      xyz="0 -0.061 -0.0155"
+      rpy="0 0 0" />
+    <parent
+      link="Hip_Pitch_Right" />
+    <child
+      link="Hip_Roll_Right" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-1.53"
+      upper="0.26"
+      effort="120"
+      velocity="10.9" />
+  </joint>
+  <link
+    name="Hip_Yaw_Right">
+    <inertial>
+      <origin
+        xyz="-0.0027038 -0.0003846 -0.1349933"
+        rpy="0 0 0" />
+      <mass
+        value="2.5647" />
+      <inertia
+        ixx="0.018906"
+        ixy="0.000055"
+        ixz="0.000424"
+        iyy="0.019196"
+        iyz="0.000002"
+        izz="0.003242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 -0.07"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.14" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <visual>
+      <origin
+        xyz="-0.007 0 -0.2095"
+        rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.08" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 -0.07"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.14" />
+      </geometry>
+    </collision>
+    <collision>
+      <origin
+        xyz="-0.007 0 -0.2095"
+        rpy="1.5707 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.08" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_hip_r_yaw"
+    type="revolute">
+    <origin
+      xyz="-0.0005 0 -0.075"
+      rpy="0 0 0" />
+    <parent
+      link="Hip_Roll_Right" />
+    <child
+      link="Hip_Yaw_Right" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="60"
+      velocity="10.9" />
+  </joint>
+  <link
+    name="Shank_Right">
+    <inertial>
+      <origin
+        xyz="0.0061751 -0.0010982 -0.1230018"
+        rpy="0 0 0" />
+      <mass
+        value="2.085" />
+      <inertia
+        ixx="0.013245"
+        ixy="0.000030"
+        ixz="0.000610"
+        iyy="0.013290"
+        iyz="0.000009"
+        izz="0.002545" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.007 0 -0.17"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.2" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0.007 0 -0.17"
+        rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.2" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_knee_r_pitch"
+    type="revolute">
+    <origin
+      xyz="-0.007 -0 -0.2095"
+      rpy="0 0 0" />
+    <parent
+      link="Hip_Yaw_Right" />
+    <child
+      link="Shank_Right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.26"
+      effort="130"
+      velocity="11.7" />
+  </joint>
+  <link
+    name="Ankle_Cross_Right">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.05" />
+      <inertia
+        ixx="0.00002"
+        ixy="0.00000"
+        ixz="0.00000"
+        iyy="0.00002"
+        iyz="0.00000"
+        izz="0.00002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.02" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.02" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="J_ankle_r_pitch"
+    type="revolute">
+    <origin
+      xyz="0.007 0.0015 -0.3"
+      rpy="0 0 0" />
+    <parent
+      link="Shank_Right" />
+    <child
+      link="Ankle_Cross_Right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.87"
+      upper="0.35"
+      effort="72"
+      velocity="18.8" />
+  </joint>
+  <link
+    name="right_foot_link">
+    <inertial>
+      <origin
+        xyz="0.0198743 0 -0.0279436"
+        rpy="0 0 0" />
+      <mass
+        value="0.7981" />
+      <inertia
+        ixx="0.0004793566"
+        ixy="0"
+        ixz="-0.0001115482"
+        iyy="0.0031119535"
+        iyz="0"
+        izz="0.0032936988" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.0 0 -0.035"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_foot.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.76 0.76 0.76 0.8" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.0 0 -0.035"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh filename="../meshes/right_foot.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J_ankle_r_roll"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Ankle_Cross_Right" />
+    <child
+      link="right_foot_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.44"
+      upper="0.44"
+      effort="36"
+      velocity="12.4" />
+  </joint>
+</robot>
